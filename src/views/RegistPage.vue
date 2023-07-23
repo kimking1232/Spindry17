@@ -79,15 +79,6 @@
             </div>
             <div class="row mt-3">
               <div class="col-lg-6">
-                <input
-                  type="checkbox"
-                  class="form-check-input"
-                  id="exampleCheck1"
-                />
-                <label class="form-check-label" for="exampleCheck1"
-                  >Ingat Saya</label
-                >
-                <br />
                 <button class="btn btn-primary">Daftar</button>
                 <br />
                 <router-link to="/LoginPage"
@@ -113,6 +104,8 @@
 <script>
 // import components
 import FooterComp from "../components/FooterComp.vue";
+import axios from "axios";
+// import { required, email } from '@vuelidate/validators';
 
 export default {
   name: "RegistPage",
@@ -121,13 +114,50 @@ export default {
   },
   data() {
     return {
-      register: {},
+      register: {
+        'name': '',
+        'telephone': '',
+        'email': '', 
+        'password': '',
+        'address': '',
+      },
     };
   },
+  // validation(){
+  //   return{
+  //     register: {
+  //       'name': {required},
+  //       'telephone': {required},
+  //       'email': {required, email}, 
+  //       'password': {required},
+  //       'address': {required},
+  //     },
+  //   }
+  // },
   methods: {
     postRegister()
     {
-      console.log(this.register)
+      axios.post('http://spindry17.test/api/register', this.register)
+      .then((response) => {
+        // console.log(response.data)
+        if(response.data.status == 'error') {
+          for (var pesan in response.data.message)
+          {
+            this.$toast.error(response.data.message[pesan][0], {
+              position: 'top-right',
+              duration: 2000
+            });
+          }
+        } else {
+          this.$toast.success(response.data.message, {
+              position: 'top-right',
+              duration: 2000
+            });
+        }
+      })
+      .catch((error) => {
+        console.log(error)
+      });
     }
   }
 };

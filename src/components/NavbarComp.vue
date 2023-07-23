@@ -17,7 +17,25 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
+
+          <div class="profil" v-if="this.statusLogin">
+            <h5><b>Hi, {{this.username}}!</b></h5>
+            <div class="dropdown">
+              <button
+                class="btn btn-secondary dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img src="../assets/ic-profil.png" alt="" width="30px">
+              </button>
+              <ul class="dropdown-menu">
+                <li><button class="dropdown-item" @click="logout">Log Out</button></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="navbar-nav" v-else>
             <router-link to="/RegistPage"
               ><button class="btn btn-warning">Daftar</button></router-link
             >
@@ -32,8 +50,42 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   name: "NavbarComp",
+  data() {
+    return{
+      statusLogin: localStorage.getItem('statusLogin'),
+      token: localStorage.getItem('token'),
+      username: localStorage.getItem('username'),
+    }
+  },
+  methods:{
+    logout()
+    { 
+      // console.log(this.token);
+      localStorage.removeItem("statusLogin")
+      localStorage.removeItem('token')
+      localStorage.removeItem('username')
+      axios.get('http://spindry17.test/api/logout', {headers: {'authorization': 'Bearer ' + this.token}})
+      .then((response) => {
+        this.$toast.success(response.data.message, {
+              position: 'top-right',
+              duration: 2000
+            });
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+      this.$router.push('/');
+    }
+  },
+  // mounted(){
+    // console.log(this.statusLogin);
+    // localStorage.removeItem('user')
+    // localStorage.removeItem('statusLogin')
+  // }
 };
 </script>
 
@@ -49,6 +101,23 @@ export default {
 #NavbarComp .navbar-nav .btn {
   width: 120px;
   margin-right: 20px;
+}
+
+#NavbarComp .profil {
+    margin-left: auto;
+}
+
+#NavbarComp h5 {
+    color: white;
+}
+
+#NavbarComp .dropdown button {
+    background: none;
+    border: none;
+}
+
+#NavbarComp .dropdown{
+    display: inline;
 }
 
 /* mobile */

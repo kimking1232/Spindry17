@@ -2,7 +2,7 @@
   <div id="OrderPage">
     <header>
       <!-- navbar -->
-      <NavlogComp />
+      <NavbarComp />
       <!-- navbar -->
     </header>
 
@@ -100,65 +100,44 @@
                 Cleaning, Setrika & Packing
               </h6>
 
-              <!-- form 1 -->
-              <div class="row mt-5">
-                <div class="col-lg-6">
-                  <label for=""><b>Nama Lengkap</b></label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Masukkan Nama Lengkap"
-                    aria-label="Nama Lengkap"
-                  />
+              <!-- form pribadi -->
+              <form>
+                <div class="row mb-5">
+                  <div class="col-lg-6">
+                    <br />
+                    <label for=""><b>Jenis Pakaian</b></label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="cth. kemeja, jeans, dll."
+                      aria-label="jenis pakaian"
+                    />
+                  </div>
+                  <div class="col-lg-6">
+                    <br />
+                    <label for=""><b>Tanggal Pencucian</b></label>
+                    <input
+                      type="datetime-local"
+                      class="form-control"
+                      placeholder="Tanggal Pencucian"
+                      aria-label="tanggal pencucian"
+                    />
+                  </div>
                 </div>
-                <div class="col-lg-6">
-                  <label for=""><b>Nomer Telepon/WA</b></label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Masukan Nomer Telepon"
-                    aria-label="Nomer Telepon"
-                  />
-                </div>
-              </div>
-              <!-- form 1 -->
 
-              <!-- form 2 -->
-              <div class="row mb-5">
-                <div class="col-lg-6">
-                  <br />
-                  <label for=""><b>Jenis Pakaian</b></label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="cth. kemeja, jeans, dll."
-                    aria-label="jenis pakaian"
-                  />
+                <div class="alert alert-warning" role="alert">
+                  *Informasi total Biaya dan pembayaran akan dilakukan di outlet
+                  setelah melakukan penimbangan
                 </div>
-                <div class="col-lg-6">
-                  <br />
-                  <label for=""><b>Tanggal Pencucian</b></label>
-                  <input
-                    type="datetime-local"
-                    class="form-control"
-                    placeholder="Tanggal Pencucian"
-                    aria-label="tanggal pencucian"
-                  />
-                </div>
-              </div>
-              <!-- form 2 -->
 
-              <div class="alert alert-warning" role="alert">
-                *Informasi total Biaya dan pembayaran akan dilakukan di outlet
-                setelah melakukan penimbangan
-              </div>
-
-              <router-link to="/SuksesPage1"
-                ><button class="btn btn-primary">
-                  Pesan Sekarang >
-                </button></router-link
-              >
+                <router-link to="/SuksesPage1"
+                  ><button class="btn btn-primary">
+                    Pesan Sekarang >
+                  </button></router-link
+                >
+              </form>
             </div>
+            <!-- form standar -->
             <div
               class="tab-pane fade"
               id="pills-standar"
@@ -171,67 +150,46 @@
                 Packing
               </h6>
 
-              <!-- form 1 -->
-              <div class="row mt-5">
-                <div class="col-lg-6">
-                  <label for=""><b>Nama Lengkap</b></label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Masukkan Nama Lengkap"
-                    aria-label="Nama Lengkap"
-                  />
+              <form>
+                <div class="row mb-5">
+                  <div class="col-lg-6">
+                    <br />
+                    <label for=""><b>Jenis Pakaian</b></label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="cth. kemeja, jeans, dll."
+                      aria-label="jenis pakaian"
+                    />
+                  </div>
+                  <div class="col-lg-6">
+                    <br />
+                    <label for=""><b>Tanggal Pencucian</b></label>
+                    <input
+                      type="datetime-local"
+                      class="form-control"
+                      placeholder="Tanggal Pencucian"
+                      aria-label="tanggal pencucian"
+                    />
+                  </div>
                 </div>
-                <div class="col-lg-6">
-                  <label for=""><b>Nomer Telepon/WA</b></label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Masukan Nomer Telepon"
-                    aria-label="Nomer Telepon"
-                  />
-                </div>
-              </div>
-              <!-- form 1 -->
 
-              <!-- form 2 -->
-              <div class="row mb-5">
-                <div class="col-lg-6">
-                  <br />
-                  <label for=""><b>Jenis Pakaian</b></label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="cth. kemeja, jeans, dll."
-                    aria-label="jenis pakaian"
-                  />
+                <div class="alert alert-warning" role="alert">
+                  *Informasi total Biaya dan pembayaran akan dilakukan di outlet
+                  setelah melakukan penimbangan
                 </div>
-                <div class="col-lg-6">
-                  <br />
-                  <label for=""><b>Tanggal Pencucian</b></label>
-                  <input
-                    type="datetime-local"
-                    class="form-control"
-                    placeholder="Tanggal Pencucian"
-                    aria-label="tanggal pencucian"
-                  />
-                </div>
-              </div>
-              <!-- form 2 -->
 
-              <div class="alert alert-warning" role="alert">
-                *Informasi total Biaya dan pembayaran akan dilakukan di outlet
-                setelah melakukan penimbangan
-              </div>
-
-              <router-link to="/SuksesPage1"
-                ><button class="btn btn-primary">
-                  Pesan Sekarang >
-                </button></router-link
-              >
+                <router-link to="/SuksesPage1"
+                  ><button class="btn btn-primary">
+                    Pesan Sekarang >
+                  </button></router-link
+                >
+              </form>
             </div>
+
+            <!-- premium -->
             <div
-              class="tab-pane fade"
+              class="tab-pane fade mt-2"
               id="pills-premium"
               role="tabpanel"
               aria-labelledby="pills-premium-tab"
@@ -242,77 +200,41 @@
                 Cleaning, Setrika & Packing
               </h6>
 
-              <!-- form 1 -->
-              <div class="row mt-5">
-                <div class="col-lg-6">
-                  <label for=""><b>Nama Lengkap</b></label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Masukkan Nama Lengkap"
-                    aria-label="Nama Lengkap"
-                  />
+              <form>
+                <div class="row mb-5">
+                  <div class="col-lg-6">
+                    <br />
+                    <label for=""><b>Jenis Pakaian</b></label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="cth. kemeja, jeans, dll."
+                      aria-label="jenis pakaian"
+                    />
+                  </div>
+                  <div class="col-lg-6">
+                    <br />
+                    <label for=""><b>Tanggal Pencucian</b></label>
+                    <input
+                      type="datetime-local"
+                      class="form-control"
+                      placeholder="Tanggal Pencucian"
+                      aria-label="tanggal pencucian"
+                    />
+                  </div>
                 </div>
-                <div class="col-lg-6">
-                  <label for=""><b>Nomer Telepon/WA</b></label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Masukan Nomer Telepon"
-                    aria-label="Nomer Telepon"
-                  />
-                </div>
-              </div>
-              <!-- form 1 -->
 
-              <!-- form 2 -->
-              <div class="row">
-                <div class="col-lg-6">
-                  <br />
-                  <label for=""><b>Jenis Pakaian</b></label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="cth. kemeja, jeans, dll."
-                    aria-label="jenis pakaian"
-                  />
+                <div class="alert alert-warning mt-3" role="alert">
+                  *Informasi total Biaya dan pembayaran akan dilakukan di outlet
+                  setelah melakukan penimbangan
                 </div>
-                <div class="col-lg-6">
-                  <br />
-                  <label for=""><b>Tanggal Pencucian</b></label>
-                  <input
-                    type="datetime-local"
-                    class="form-control"
-                    placeholder="Tanggal Pencucian"
-                    aria-label="tanggal pencucian"
-                  />
-                </div>
-              </div>
-              <!-- form 2 -->
 
-              <!-- form 3 -->
-              <div class="mb-5 mt-3">
-                <label for="exampleFormControlTextarea1" class="form-label"
-                  >Alamat Penjemputan</label
+                <router-link to="/SuksesPage2"
+                  ><button class="btn btn-primary">
+                    Pesan Sekarang >
+                  </button></router-link
                 >
-                <textarea
-                  class="form-control"
-                  id="exampleFormControlTextarea1"
-                  rows="3"
-                ></textarea>
-              </div>
-              <!-- form 3 -->
-
-              <div class="alert alert-warning" role="alert">
-                *Informasi total Biaya dan pembayaran akan dilakukan di outlet
-                setelah melakukan penimbangan
-              </div>
-
-              <router-link to="/SuksesPage2"
-                ><button class="btn btn-primary">
-                  Pesan Sekarang >
-                </button></router-link
-              >
+              </form>
             </div>
           </div>
           <!-- pilih layanan -->
@@ -328,7 +250,7 @@
 
 <script>
 //import components
-import NavlogComp from "../components/NavlogComp.vue";
+import NavbarComp from "../components/NavbarComp.vue";
 import FooterComp from "../components/FooterComp.vue";
 
 //iconify
@@ -337,9 +259,25 @@ import { Icon } from "@iconify/vue";
 export default {
   name: "OrderPage",
   components: {
-    NavlogComp,
+    NavbarComp,
     Icon,
     FooterComp,
+  },
+  data() {
+    return {
+      order: {},
+      token: localStorage.getItem("token"),
+      statusLogin: localStorage.getItem("statusLogin"),
+      username: localStorage.getItem("username"),
+    };
+  },
+  mounted() {
+    // console.log(this.statusLogin)
+    if (this.statusLogin) {
+      this.$router.push("/OrderPage");
+    } else {
+      this.$router.push("/LoginPage");
+    }
   },
 };
 </script>

@@ -32,7 +32,7 @@ const routes = [
     component: RegistPage
   },
   {
-    path: '/LPlogged',
+    path: '/logged',
     name: 'LPlogged',
     component: LPlogged
   },
