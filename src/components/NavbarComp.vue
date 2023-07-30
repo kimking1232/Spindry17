@@ -17,8 +17,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-
-          <div class="profil" v-if="this.statusLogin">
+          <div class="profil" v-show="this.statusLogin">
             <h5><b>Hi, {{this.username}}!</b></h5>
             <div class="dropdown">
               <button
@@ -27,7 +26,7 @@
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                <img src="../assets/ic-profil.png" alt="" width="30px">
+                <img class="prof" src="../assets/ic-profil.png" alt="" >
               </button>
               <ul class="dropdown-menu">
                 <li><button class="dropdown-item" @click="logout">Log Out</button></li>
@@ -35,12 +34,12 @@
             </div>
           </div>
 
-          <div class="navbar-nav" v-else>
+          <div class="navbar-nav" v-show="!this.statusLogin">
             <router-link to="/RegistPage"
               ><button class="btn btn-warning">Daftar</button></router-link
             >
             <router-link to="/LoginPage"
-              ><button class="btn btn-outline-light">Masuk</button></router-link
+              ><button class="btn btn-outline-dark">Masuk</button></router-link
             >
           </div>
         </div>
@@ -65,20 +64,24 @@ export default {
     logout()
     { 
       // console.log(this.token);
-      localStorage.removeItem("statusLogin")
-      localStorage.removeItem('token')
-      localStorage.removeItem('username')
       axios.get('http://spindry17.test/api/logout', {headers: {'authorization': 'Bearer ' + this.token}})
       .then((response) => {
+        localStorage.removeItem("statusLogin")
+        localStorage.removeItem('token')
+        localStorage.removeItem('username')
         this.$toast.success(response.data.message, {
               position: 'top-right',
               duration: 2000
             });
+            this.statusLogin = false;
+            return this.$router.push('/')
       })
-      .catch((error) => {
-        console.log(error)
+      .catch(() => {
+        this.$toast.error('Maaf terjadi kesalahan', {
+              position: 'top-right',
+              duration: 2000
+            });
       })
-      this.$router.push('/');
     }
   },
   // mounted(){
@@ -94,6 +97,9 @@ export default {
   margin-left: auto;
 }
 
+.prof {
+  width: 30px;
+}
 #NavbarComp .navbar-brand img {
   width: 120px;
 }
@@ -108,12 +114,13 @@ export default {
 }
 
 #NavbarComp h5 {
-    color: white;
+    color: black;
 }
 
 #NavbarComp .dropdown button {
     background: none;
-    border: none;
+    border-color: none;
+    color: black;
 }
 
 #NavbarComp .dropdown{

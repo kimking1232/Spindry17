@@ -42,7 +42,7 @@ const routes = [
     component: OrderPage
   },
   {
-    path: '/SuksesPage1',
+    path: '/sukses',
     name: 'SuksesPage1',
     component: SuksesPage1
   },

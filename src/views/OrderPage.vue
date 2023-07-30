@@ -42,201 +42,152 @@
           </div>
           <!-- pemesanan -->
 
-          <!-- pilih layanan -->
-          <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button
-                class="nav-link active"
-                id="pills-pribadi-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#pills-pribadi"
-                type="button"
-                role="tab"
-                aria-controls="pills-pribadi"
-                aria-selected="true"
-              >
-                Pribadi
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button
-                class="nav-link"
-                id="pills-standar-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#pills-standar"
-                type="button"
-                role="tab"
-                aria-controls="pills-standar"
-                aria-selected="false"
-              >
-                Standar
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button
-                class="nav-link"
-                id="pills-premium-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#pills-premium"
-                type="button"
-                role="tab"
-                aria-controls="pills-premium"
-                aria-selected="false"
-              >
-                Premium
-              </button>
-            </li>
-          </ul>
-          <div class="tab-content" id="pills-tabContent">
-            <div
-              class="tab-pane fade show active"
-              id="pills-pribadi"
-              role="tabpanel"
-              aria-labelledby="pills-pribadi-tab"
-              tabindex="0"
-            >
-              <h6>
-                <b>Detail Layanan :</b> Disediakan Fasilitas, Sabun cuci, Dry
-                Cleaning, Setrika & Packing
-              </h6>
-
-              <!-- form pribadi -->
-              <form>
-                <div class="row mb-5">
-                  <div class="col-lg-6">
-                    <br />
-                    <label for=""><b>Jenis Pakaian</b></label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="cth. kemeja, jeans, dll."
-                      aria-label="jenis pakaian"
-                    />
-                  </div>
-                  <div class="col-lg-6">
-                    <br />
-                    <label for=""><b>Tanggal Pencucian</b></label>
-                    <input
-                      type="datetime-local"
-                      class="form-control"
-                      placeholder="Tanggal Pencucian"
-                      aria-label="tanggal pencucian"
-                    />
-                  </div>
-                </div>
-
-                <div class="alert alert-warning" role="alert">
-                  *Informasi total Biaya dan pembayaran akan dilakukan di outlet
-                  setelah melakukan penimbangan
-                </div>
-
-                <router-link to="/SuksesPage1"
-                  ><button class="btn btn-primary">
-                    Pesan Sekarang >
-                  </button></router-link
-                >
-              </form>
-            </div>
-            <!-- form standar -->
-            <div
-              class="tab-pane fade"
-              id="pills-standar"
-              role="tabpanel"
-              aria-labelledby="pills-standar-tab"
-              tabindex="0"
-            >
-              <h6>
-                <b>Detail Layanan :</b> Kami bantu cuci, Dry Cleaning, Setrika &
-                Packing
-              </h6>
-
-              <form>
-                <div class="row mb-5">
-                  <div class="col-lg-6">
-                    <br />
-                    <label for=""><b>Jenis Pakaian</b></label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="cth. kemeja, jeans, dll."
-                      aria-label="jenis pakaian"
-                    />
-                  </div>
-                  <div class="col-lg-6">
-                    <br />
-                    <label for=""><b>Tanggal Pencucian</b></label>
-                    <input
-                      type="datetime-local"
-                      class="form-control"
-                      placeholder="Tanggal Pencucian"
-                      aria-label="tanggal pencucian"
-                    />
-                  </div>
-                </div>
-
-                <div class="alert alert-warning" role="alert">
-                  *Informasi total Biaya dan pembayaran akan dilakukan di outlet
-                  setelah melakukan penimbangan
-                </div>
-
-                <router-link to="/SuksesPage1"
-                  ><button class="btn btn-primary">
-                    Pesan Sekarang >
-                  </button></router-link
-                >
-              </form>
-            </div>
-
-            <!-- premium -->
-            <div
-              class="tab-pane fade mt-2"
-              id="pills-premium"
-              role="tabpanel"
-              aria-labelledby="pills-premium-tab"
-              tabindex="0"
-            >
-              <h6>
-                <b>Detail Layanan :</b> Jemput & Antar, Kami bantu cuci, Dry
-                Cleaning, Setrika & Packing
-              </h6>
-
-              <form>
-                <div class="row mb-5">
-                  <div class="col-lg-6">
-                    <br />
-                    <label for=""><b>Jenis Pakaian</b></label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="cth. kemeja, jeans, dll."
-                      aria-label="jenis pakaian"
-                    />
-                  </div>
-                  <div class="col-lg-6">
-                    <br />
-                    <label for=""><b>Tanggal Pencucian</b></label>
-                    <input
-                      type="datetime-local"
-                      class="form-control"
-                      placeholder="Tanggal Pencucian"
-                      aria-label="tanggal pencucian"
-                    />
-                  </div>
-                </div>
-
-                <div class="alert alert-warning mt-3" role="alert">
-                  *Informasi total Biaya dan pembayaran akan dilakukan di outlet
-                  setelah melakukan penimbangan
-                </div>
-
-                <router-link to="/SuksesPage2"
-                  ><button class="btn btn-primary">
-                    Pesan Sekarang >
-                  </button></router-link
-                >
-              </form>
+          <div class="isi-pemesanan">
+            <h3><b>Detail Pemesanan</b></h3>
+            <h5><b>Pilih Layanan</b></h5>
+          </div>
+          <div class="row mb-4">
+            <div class="col-lg-12">
+              <select class="form-select" v-model="order.service_id">
+                <template v-for="service in services" :key="service.id">
+                  <option :value="service.id">{{ service.title }}</option>
+                </template>
+              </select>
             </div>
           </div>
+
+          <h6>
+            <b>Detail Layanan :</b> Disediakan Fasilitas, Sabun cuci, Dry
+            Cleaning, Setrika & Packing
+          </h6>
+
+          <!-- form pribadi -->
+          <form v-on:submit.prevent="postOrder">
+            <div class="row mb-3">
+              <div class="col-lg-6">
+                <br />
+                <label for=""><b>Berat Pakaian</b></label>
+                <input
+                  type="number"
+                  class="form-control"
+                  placeholder="Berat kering pakaian"
+                  min="1"
+                  max="20"
+                  v-model="order.weight"
+                />
+              </div>
+              <div class="col-lg-6">
+                <br />
+                <label for=""><b>Tanggal Pencucian</b></label>
+                <input
+                  type="datetime-local"
+                  class="form-control"
+                  placeholder="Tanggal Pencucian"
+                  v-model="order.date"
+                />
+              </div>
+            </div>
+            <div class="row mb-5">
+              <div class="col-lg-12">
+                <label for=""><b>Pilih Promo</b></label>
+                <select class="form-select" v-model="order.promo_id">
+                  <template v-for="promo in promotions" :key="promo.id">
+                    <option :value="promo.id">{{ promo.title }}</option>
+                  </template>
+                </select>
+              </div>
+            </div>
+
+            <div class="alert alert-warning" role="alert">
+              *Informasi total Biaya dan pembayaran akan dilakukan di outlet
+              setelah melakukan penimbangan
+            </div>
+
+            <button class="btn btn-primary">Pesan Sekarang ></button>
+            
+          </form>
+          <!-- end form pribadi -->
+
+          <!-- form standar -->
+          <!-- <h6>
+            <b>Detail Layanan :</b> Kami bantu cuci, Dry Cleaning, Setrika &
+            Packing
+          </h6>
+
+          <form>
+            <div class="row mb-5">
+              <div class="col-lg-6">
+                <br />
+                <label for=""><b>Jenis Pakaian</b></label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="cth. kemeja, jeans, dll."
+                  aria-label="jenis pakaian"
+                />
+              </div>
+              <div class="col-lg-6">
+                <br />
+                <label for=""><b>Tanggal Pencucian</b></label>
+                <input
+                  type="datetime-local"
+                  class="form-control"
+                  placeholder="Tanggal Pencucian"
+                  aria-label="tanggal pencucian"
+                />
+              </div>
+            </div>
+
+            <div class="alert alert-warning" role="alert">
+              *Informasi total Biaya dan pembayaran akan dilakukan di outlet
+              setelah melakukan penimbangan
+            </div>
+
+            <router-link to="/SuksesPage1"
+              ><button class="btn btn-primary">
+                Pesan Sekarang >
+              </button></router-link
+            >
+          </form> -->
+
+          <!-- premium -->
+          <!-- <h6>
+            <b>Detail Layanan :</b> Jemput & Antar, Kami bantu cuci, Dry
+            Cleaning, Setrika & Packing
+          </h6>
+
+          <form>
+            <div class="row mb-5">
+              <div class="col-lg-6">
+                <br />
+                <label for=""><b>Jenis Pakaian</b></label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="cth. kemeja, jeans, dll."
+                  aria-label="jenis pakaian"
+                />
+              </div>
+              <div class="col-lg-6">
+                <br />
+                <label for=""><b>Tanggal Pencucian</b></label>
+                <input
+                  type="datetime-local"
+                  class="form-control"
+                  placeholder="Tanggal Pencucian"
+                  aria-label="tanggal pencucian"
+                />
+              </div>
+            </div>
+
+            <div class="alert alert-warning mt-3" role="alert">
+              *Informasi total Biaya dan pembayaran akan dilakukan di outlet
+              setelah melakukan penimbangan
+            </div>
+
+            <button class="btn btn-primary">Pesan Sekarang ></button>
+          </form> -->
+          
           <!-- pilih layanan -->
         </div>
       </div>
@@ -255,6 +206,7 @@ import FooterComp from "../components/FooterComp.vue";
 
 //iconify
 import { Icon } from "@iconify/vue";
+import axios from "axios";
 
 export default {
   name: "OrderPage",
@@ -265,12 +217,68 @@ export default {
   },
   data() {
     return {
-      order: {},
-      token: localStorage.getItem("token"),
-      statusLogin: localStorage.getItem("statusLogin"),
-      username: localStorage.getItem("username"),
+      'token': localStorage.getItem("token"),
+      'statusLogin': localStorage.getItem("statusLogin"),
+      'username': localStorage.getItem("username"),
+      'order': {},
+      'promotions': [],
+      'services': [],
+      'headers': {
+        headers: {'authorization': 'Bearer ' + localStorage.getItem("token")}
+      }
     };
   },
+
+  methods: {
+    getService() {
+      axios
+        .get("http://spindry17.test/api/service")
+        .then((response) => {
+          this.services = response.data.data;
+          // console.log(response.data.data);
+        })
+        .catch((error) => {
+          alert(error);
+          // console.log(error);
+        });
+    },
+    getPromotion() {
+      axios
+        .get("http://spindry17.test/api/promotion")
+        .then((response) => {
+          // console.log(response.data.data);
+          this.promotions = response.data.data;
+        })
+        .catch((error) => {
+          alert(error);
+          // console.log(error);
+        });
+    },
+    postOrder() {
+      axios
+      .post("http://spindry17.test/api/order", this.order, this.headers )
+      .then((response) => {
+        if(response.data.status == "error") {
+          for(var pesan in response.data.message)
+          {
+            // console.log(response.data.status[pesan][0]);
+            this.$toast.error(response.data.message[pesan][0], {
+              position: 'top-right',
+              duration: 2000
+            });
+          }
+        } else {
+          // console.log(response.data.data.token)
+          this.$toast.success(response.data.message, {
+            position: 'top-right',
+            duration: 2000
+          });
+          return this.$router.push('/sukses')
+        }
+      })
+    },
+  },
+
   mounted() {
     // console.log(this.statusLogin)
     if (this.statusLogin) {
@@ -278,6 +286,8 @@ export default {
     } else {
       this.$router.push("/LoginPage");
     }
+    this.getPromotion();
+    this.getService();
   },
 };
 </script>
